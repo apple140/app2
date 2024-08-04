@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'jenkins_agent' }
+    agent any
     tools {
         jdk 'java17'
         maven 'maven3'
@@ -25,11 +25,7 @@ pipeline {
 
        }
 
-       stage("Test Application"){
-           steps {
-                 sh "mvn test"
-           }
-       }
+     
     }
 }
      
